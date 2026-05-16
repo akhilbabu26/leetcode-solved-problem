@@ -1,0 +1,16 @@
+func distributeCandies(candyType []int) int {
+    toEat := len(candyType)/2
+    candy := make(map[int]int)
+
+    for _, v := range candyType{
+        candy[v]++
+    }
+
+    if len(candy) >= toEat{
+        return toEat
+    }else{
+        return len(candy)
+    }
+
+    return 0
+}
