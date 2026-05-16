@@ -4,13 +4,9 @@ func distributeCandies(candyType []int) int {
 
     for _, v := range candyType{
         candy[v] = struct{}{}
+        if len(candy) == toEat{
+            return toEat
+        }
     }
-
-    if len(candy) >= toEat{
-        return toEat
-    }else{
-        return len(candy)
-    }
-
-    return 0
+    return len(candy)
 }
