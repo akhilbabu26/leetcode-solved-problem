@@ -1,0 +1,22 @@
+func frequencySort(nums []int) []int {
+    freq := make(map[int]int)
+
+    for _, v := range nums{
+        freq[v]++
+    }
+
+    for i := 0; i<len(nums); i++{
+        for j := i+1; j<len(nums); j++{
+            if freq[nums[i]] == freq[nums[j]]{
+                if nums[i] < nums[j]{
+                    nums[i], nums[j] = nums[j], nums[i]
+                }
+            }
+            if freq[nums[i]] > freq[nums[j]]{
+                nums[i], nums[j] = nums[j], nums[i]
+            }
+        }
+    }
+
+    return nums
+}
