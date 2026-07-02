@@ -3,7 +3,7 @@ func containsDuplicate(nums []int) bool {
 
     for _, v := range nums{
         m[v]++
-        if m[v] >= 2{
+        if m[v] > 1{
             return true
         }
     }
